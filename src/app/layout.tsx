@@ -6,6 +6,8 @@ import "~/styles/font-awesome.min.css";
 import "~/styles/pnotify.custom.min.css";
 import "~/styles/slick.css";
 
+import "~/styles/scss/main.scss";
+
 import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";

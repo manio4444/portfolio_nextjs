@@ -1,0 +1,44 @@
+#section_expectations {
+  #google_map {
+    width: 100%;
+  }
+  .section_expectations_desc {
+    padding: 60px 40px;
+    p {
+      margin-bottom: 1em;
+    }
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+    }
+    ul > li {
+      line-height: 1.5em;
+    }
+  }
+@media (max-width: 767px) {
+} //media
+@media (min-width: 768px) {
+} //media
+@media (max-width: 1023px) {
+  background-color: $red;
+  color: $white;
+  #google_map { height: 400px; }
+} //media
+@media (min-width: 1024px) {
+  .wrapper--section_expectations {
+    position: relative;
+  }
+  .section_expectations_desc {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 600px;
+    background-color: $red;
+    color: $white;
+    z-index: 1;
+    font-size: 15px;
+    text-align: justify;
+  }
+  #google_map { height: 700px; }
+} //media
+} //#section_expectations

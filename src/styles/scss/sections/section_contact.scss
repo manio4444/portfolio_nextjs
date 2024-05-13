@@ -1,0 +1,112 @@
+#section_contact {
+  @media screen {
+    color: $white;
+    background-color: $red;
+    font-size: 15px;
+  }
+
+  .heading {
+    margin-bottom: 1em;
+    @media print {
+      display: none;
+    }
+  }
+
+  .contact_form {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @media print {
+      display: none;
+    }
+  }
+  .section_contact_desc {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    line-height: 1.7em;
+    max-width: 780px;
+    @media print {
+      display: none;
+    }
+  }
+  input, textarea {
+    background-color: transparent;
+    border: 1px solid white;
+    @include placeholder {
+      color: inherit;
+    };
+    // font-size: 14px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="email"] {
+    flex-basis: calc(50% - 8px);
+  }
+  textarea {
+    overflow: hidden;
+  }
+  .contact_form.form_lock {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .send_btn {
+    padding: 17px 62px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: inherit;
+    // font-weight: 900;
+    cursor: pointer;
+  }
+  .send_btn:disabled {
+    opacity: 0.2;
+  }
+
+  .section_contact_labels {
+    display: flex;
+    margin-bottom: .8em;
+    &_el {
+      display: flex;
+      align-items: center;
+      margin: 0 20px 0 0;
+      .fa {
+        margin-right: 10px;
+        font-size: 1.3em;
+        opacity: .9;
+        display: flex;
+        &.fa-envelope::before {
+          font-size: 0.9em;
+        }
+      }
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+
+@media (max-width: 640px) {
+  input[type="text"],
+  input[type="email"] {
+    flex-basis: 100%;
+  }
+} //media
+@media (max-width: 767px) {
+} //media
+@media (min-width: 768px) {
+} //media
+@media (max-width: 1023px) {
+  textarea {
+    height: 150px;
+  }
+} //media
+@media (min-width: 1024px) {
+  textarea {
+    height: 255px;
+  }
+} //media
+} //#section_contact

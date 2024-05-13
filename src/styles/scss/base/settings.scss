@@ -1,0 +1,87 @@
+// ################ GLOBAL SETTINGS ###########
+* {
+	box-sizing:border-box;
+}
+
+body {
+  font-family: $font_default;
+  color: $color1;
+  font-weight: $font_weight;
+  font-size: $font_size;
+	@media screen {
+		background-color: $background;
+	}
+}
+
+
+// ################ DEFAULT STRUCTURE SETTINGS ###########
+.page_container {
+	display: flex;
+	@media screen {
+		flex-direction: column;
+	}
+	@media print {
+		flex-wrap: wrap;
+	}
+}
+
+.page_section {
+	width:100%;
+}
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px $padding 60px;
+	@media screen {
+		max-width: $wrapper + $padding + $padding; //double padding added because of box-sizing: border-box
+	}
+	@media print {
+		padding: 15px 10px 0;
+	}
+}
+
+
+// ################ OTHER SETTINGS ###########
+p {
+	line-height: 2em;
+	& > a {
+		font-weight: 500;
+		text-decoration: underline;
+	}
+}
+strong { font-weight: 900; }
+
+@include selection($white, $red);
+
+//hover options not for touch devices - detecting by js: touchscreenDetect()
+body.noTouchscreen {
+	button, a {
+		transition: color .3s ease,
+		background-color .3s ease,
+		border-color .3s ease,
+		opacity .3s ease;
+	}
+	button:hover, a:hover { opacity: 0.7; }
+  a[href^="tel:"] {pointer-events: none;} //disables tel: protocol on most desktop devices
+}
+
+//class to show only first child of element, before scripts load
+.beforeLoad>*:not(:first-of-type) {display: none;}
+
+//pnotify
+.brighttheme-info {
+  background-color: $color1;
+  border: 0 solid $color2;
+  color: $white;
+}
+
+// ::-webkit-scrollbar {
+//   width: 12px;
+//   background: $color1;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 1px;
+//   background-color: $color2;
+//   border-left: 1px solid white;
+// }

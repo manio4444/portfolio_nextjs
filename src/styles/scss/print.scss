@@ -1,0 +1,69 @@
+@page {
+  size: A4;
+}
+
+@media print {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .page_section {
+    flex-basis: 50%;
+  }
+  #section_first {
+    order: 1;
+    flex-basis: 100%;
+  }
+  #section_contact {
+    order: 2;
+    flex-basis: 100%;
+  }
+  #section_experience {
+    order: 3;
+    flex-basis: 47%;
+  }
+  #section_skills {
+    order: 4;
+    flex-basis: 53%;
+  }
+  #section_portfolio {
+    order: 5;
+    flex-basis: 47%;
+  }
+  #section_asdadsa {
+    order: 6;
+  }
+  #section_fillers {
+    order: 7;
+    flex-basis: 53%;
+    margin-top: -10px;
+  }
+  #section_footer {
+    order: 8;
+    flex-basis: 100%;
+  }
+
+
+  #section_experience {
+    .section_experience_side {
+      //@include section_experience_side_reverse;
+      .section_experience_icon {
+        display: none;
+      }
+    }
+  }
+
+  .section_portfolio_qr {
+    width: 200px;
+  }
+
+  .section_filler_ul {
+    list-style-type: circle;
+    padding-left: 18px;
+    line-height: 1.7em;
+  }
+
+}
+
+//@media print
