@@ -1,7 +1,6 @@
 import "~/styles/globals.css";
 
 import "~/styles/animate.css";
-import "~/styles/aos.css";
 import "~/styles/font-awesome.min.css";
 import "~/styles/pnotify.custom.min.css";
 import "~/styles/slick.css";
@@ -11,6 +10,7 @@ import "~/styles/scss/main.scss";
 import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import AOSProvider from "~/app/_providers/AOSProvider";
 
 export const metadata = {
   title: "Portfolio - Marcin Kalinowski",
@@ -26,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <AOSProvider>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </AOSProvider>
       </body>
     </html>
   );
