@@ -1,14 +1,15 @@
-import "~/styles/globals.css";
+import { type PropsWithChildren } from "react";
 
+import "~/styles/globals.css";
 import "~/styles/animate.css";
 import "~/styles/font-awesome.min.css";
 import "~/styles/pnotify.custom.min.css";
+
 import "~/styles/slick.css";
 
 import "~/styles/scss/main.scss";
 
-import { GeistSans } from "geist/font/sans";
-
+import { Roboto, Oswald } from "next/font/google";
 import { TRPCReactProvider } from "~/trpc/react";
 import AOSProvider from "~/app/_providers/AOSProvider";
 
@@ -18,13 +19,19 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const roboto = Roboto({
+  weight: ["100", "300", "500"],
+  subsets: ["latin-ext"],
+  variable: "--font-roboto",
+});
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+});
+
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${oswald.variable}`}>
       <body>
         <AOSProvider>
           <TRPCReactProvider>{children}</TRPCReactProvider>

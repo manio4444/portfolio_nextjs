@@ -1,12 +1,12 @@
 // ################ VARIABLES ONLY ###########
-$font_default: 'Roboto', sans-serif;
-$font2: 'Oswald', sans-serif;
+$font_default: var(--font-roboto);
+$font2: var(--font-oswald);
 $font_weight: 300;
 $font_size: 15px;
-$font_awesome: 'FontAwesome';
-$font_stars: 'stars-rating';
+$font_awesome: "FontAwesome";
+$font_stars: "stars-rating";
 
-$wrapper:1178px; //without padding
+$wrapper: 1178px; //without padding
 $padding: 15px;
 
 $color1: #35383f;
@@ -15,7 +15,7 @@ $color2: #888888;
 $background: #edeff0;
 
 $red: #bf4040;
-$white: #FFFFFF;
+$white: #ffffff;
 
 $top_menu_height: 92px;
 
