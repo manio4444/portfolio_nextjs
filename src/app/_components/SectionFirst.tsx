@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CircleArrowRight } from "~/app/_components/FontAwesome6";
 
 export default function SectionFirst() {
   return (
@@ -22,6 +23,7 @@ export default function SectionFirst() {
         </h1>
         <a href="#section_about" className="section_first_more screen-only">
           Czytaj więcej
+          <CircleArrowRight />
         </a>
       </div>
     </header>

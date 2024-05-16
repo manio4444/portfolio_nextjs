@@ -81,21 +81,14 @@
     padding: 5px 8px 5px 15px;
     display: flex;
     align-items: center;
-    &::after {
+    svg {
       margin-left: 10px;
-      font-family: $font_awesome;
-      color: black;
-      background-color: $white;
-      border-radius: 50%;
-      content: '\f061';
-      font-size: 18px;
-      line-height: 26px;
-      text-align: center;
+      fill: $white;
       width: 26px;
       height: 26px;
       transition: transform .2s ease;
     }
-    &:hover::after {
+    &:hover svg {
       transform: rotate(90deg);
     }
     &:hover {
