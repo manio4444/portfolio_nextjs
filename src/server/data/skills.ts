@@ -1,4 +1,4 @@
-import { FunctionComponent, SVGProps } from "react";
+import { type FunctionComponent, type SVGProps } from "react";
 
 import Svgsass from "~/svg/skills/sass.svg";
 import Svgstyled from "~/svg/skills/styled.svg";
@@ -25,7 +25,7 @@ export interface Skill {
   title: string;
   cssClassName: string;
   stars: string;
-  svg?: FunctionComponent<SVGProps<SVGSVGElement>>;
+  svg?: FunctionComponent<SVGProps<HTMLOrSVGElement>>;
 }
 
 const skills: { data: Skill[] } = {
