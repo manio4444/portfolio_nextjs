@@ -1,4 +1,4 @@
-import { Skill } from "~/server/data/skills";
+import { type Skill } from "~/server/data/skills";
 
 interface ISectionSkillsProps {
   skills: {

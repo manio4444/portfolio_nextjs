@@ -1,5 +1,10 @@
 import { type FunctionComponent, type SVGProps } from "react";
 
+import {
+  Css3,
+  Html5,
+  UpRightAndDownLeftFromCenter,
+} from "~/app/_components/FontAwesome6Icons";
 import Svgsass from "~/svg/skills/sass.svg";
 import Svgstyled from "~/svg/skills/styled.svg";
 import Svgmaterial from "~/svg/skills/material.svg";
@@ -23,7 +28,7 @@ import Svgadobephotoshop from "~/svg/skills/adobephotoshop.svg";
 
 export interface Skill {
   title: string;
-  cssClassName: string;
+  cssClassName?: string;
   stars: string;
   svg?: FunctionComponent<SVGProps<HTMLOrSVGElement>>;
 }
@@ -32,142 +37,137 @@ const skills: { data: Skill[] } = {
   data: [
     {
       title: "HTML5",
-      cssClassName: "icon--hmtl icon--fa",
+      cssClassName: "icon--padding-big",
       stars: "●●●●●",
+      svg: Html5,
     },
     {
       title: "CSS3",
-      cssClassName: "icon--css icon--fa",
+      cssClassName: "icon--padding-big",
       stars: "●●●●●",
+      svg: Css3,
     },
     {
       title: "SASS, LESS",
-      cssClassName: "icon--noborder icon--svg",
+      cssClassName: "icon--noborder",
       stars: "●●●●●",
       // eslint-disable-next-line @next/next/no-img-element
       svg: Svgsass,
     },
     {
       title: "Styled components",
-      cssClassName: "icon--svg",
       stars: "●●●●●",
       svg: Svgstyled,
     },
     {
       title: "Bootstrap, Semantic, Material UI",
-      cssClassName: "icon--padding-big icon--svg",
+      cssClassName: "icon--padding-big",
       stars: "●●●●●",
       svg: Svgmaterial,
     },
     {
       title: "Responsive Web Design",
-      cssClassName: "icon--rwd icon--fa",
+      cssClassName: "icon--padding-superbig",
       stars: "●●●●●",
+      svg: UpRightAndDownLeftFromCenter,
     },
     {
       title: "JavaScript",
-      cssClassName: "icon--noborder icon--svg",
+      cssClassName: "icon--noborder",
       stars: "●●●●●",
       svg: Svgjavascript,
     },
     {
       title: "TypeScript",
-      cssClassName: "icon--noborder icon--svg",
+      cssClassName: "icon--noborder",
       stars: "●●●●○",
       svg: Svgtypescript,
     },
     {
       title: "React",
-      cssClassName: "icon--react icon--svg",
+      cssClassName: "icon--stroke-color",
       stars: "●●●●●",
       svg: Svgreact,
     },
     {
       title: "Redux",
-      cssClassName: "icon--padding-big icon--svg",
+      cssClassName: "icon--padding-big",
       stars: "●●●●○",
       svg: Svgredux,
     },
     {
       title: "REST API",
-      cssClassName: "icon--padding-big icon--svg",
+      cssClassName: "icon--padding-big",
       stars: "●●●●●",
       svg: Svgapi,
     },
     {
       title: "Cypress",
-      cssClassName: "icon--noborder icon--svg",
+      cssClassName: "icon--noborder",
       stars: "●●●●○",
       svg: Svgcypress,
     },
     {
       title: "Jest, Testing Library",
-      cssClassName: "icon--padding-big icon--svg",
+      cssClassName: "icon--padding-big",
       stars: "●●●○○",
       svg: Svgjest,
     },
     {
       title: "Git, Svn",
-      cssClassName: "icon--svg",
       stars: "●●●●●",
       svg: Svggit,
     },
     {
       title: "Grunt, Gulp, Webpack",
-      cssClassName: "icon--svg",
       stars: "●●●●●",
       svg: Svggulp,
     },
     {
       title: "Vagrant, Docker",
-      cssClassName: "icon--svg icon--padding-small",
+      cssClassName: "icon--padding-small",
       stars: "●●●●○",
       svg: Svgdocker,
     },
     {
       title: "Windows, MacOS, Linux",
-      cssClassName: "icon--svg",
       stars: "●●●●●",
       svg: Svglinux,
     },
     {
       title: "VMware, VirtualBox",
-      cssClassName: "icon--svg",
       stars: "●●●●○",
       svg: Svgvmware,
     },
     {
       title: "PHP",
-      cssClassName: "icon--svg",
       stars: "●●●○○",
       svg: Svgphp,
     },
     {
       title: "Smarty, Twig",
-      cssClassName: "icon--twig icon--fa",
+      cssClassName: "icon--twig",
       stars: "●●●●●",
     },
     {
       title: "Npm, Yarn",
-      cssClassName: "icon--svg",
       stars: "●●●●●",
       svg: Svgnpm,
     },
     {
       title: "SQL",
-      cssClassName: "icon--svg",
       stars: "●●●◐○",
       svg: Svgmysql,
     },
     {
       title: "Invision, Zeplin, Figma",
-      cssClassName: "icon--svg icon--padding-superbig icon--invision",
+      cssClassName: "icon--padding-superbig",
       stars: "●●●●●",
       svg: Svginvision,
     },
     {
       title: "Photoshop",
-      cssClassName: "icon--svg icon--padding-small",
+      cssClassName: "icon--padding-small",
       stars: "●●◐○○",
       svg: Svgadobephotoshop,
     },

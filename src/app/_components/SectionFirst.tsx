@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CircleArrowRight } from "~/app/_components/FontAwesome6";
+import { CircleArrowRight } from "~/app/_components/FontAwesome6Icons";
 
 export default function SectionFirst() {
   return (
