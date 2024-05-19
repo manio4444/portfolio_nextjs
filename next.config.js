@@ -4,10 +4,12 @@
  */
 await import("./src/env.js");
 
-import withSVG from 'next-plugin-svgr';
+import withSVG from "next-plugin-svgr";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  distDir: "build",
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call
 export default withSVG(config);
