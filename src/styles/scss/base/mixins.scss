@@ -1,13 +1,4 @@
-@mixin placeholder {
-  &::-webkit-input-placeholder { @content }
-  &::-moz-placeholder { @content }
-  &:-ms-input-placeholder { @content }
-  &:-moz-placeholder { @content }
-  &:placeholder-shown { @content }
-  &::placeholder { @content }
-}
-
-@mixin selection($czcionka, $tlo){
+@mixin selection($czcionka, $tlo) {
   /* WebKit/Blink Browsers */
   ::selection {
     background: $tlo;
