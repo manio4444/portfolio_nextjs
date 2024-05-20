@@ -1,5 +1,10 @@
 import { type ExperienceItem } from "~/server/data/experience";
 import { type EducationItem } from "~/server/data/education";
+import {
+  Briefcase,
+  Calendar,
+  GraduationCap,
+} from "~/app/_components/FontAwesome6Icons";
 
 interface ISectionExperienceProps {
   experience: {
@@ -21,10 +26,11 @@ export default function SectionExperience({
           Doświadczenie zawodowe
         </h2>
         <div className="section_experience_side section_experience_side--left">
-          <span className="section_experience_icon section_experience_icon--work"></span>
+          <div className="section_experience_icon">
+            <Briefcase />
+          </div>
           {experience.data.map((job, index) => (
             <article key={index} className="section_experience_el">
-              <div className="section_skills_el_icon"></div>
               <div className="section_skills_el_content">
                 <h3
                   data-aos="fade-right"
@@ -37,6 +43,7 @@ export default function SectionExperience({
                   className="section_experience_el_date"
                   dateTime={job.datetimeTag}
                 >
+                  <Calendar />
                   {job.datetimeText}
                 </time>
                 <p data-aos="fade-right" className="section_experience_el_desc">
@@ -68,7 +75,9 @@ export default function SectionExperience({
           ))}
         </div>
         <div className="section_experience_side section_experience_side--right screen-only">
-          <span className="section_experience_icon section_experience_icon--school"></span>
+          <div className="section_experience_icon section_experience_icon--school">
+            <GraduationCap />
+          </div>
           {education.data.map((education, index) => (
             <article key={index} className="section_experience_el">
               <h3 data-aos="fade-left" className="section_experience_el_title">
@@ -79,6 +88,7 @@ export default function SectionExperience({
                 className="section_experience_el_date"
                 dateTime={education.datetimeTag}
               >
+                <Calendar />
                 {education.datetimeText}
               </time>
               <p data-aos="fade-left" className="section_experience_el_desc">
