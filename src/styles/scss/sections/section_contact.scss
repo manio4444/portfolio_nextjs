@@ -32,7 +32,8 @@
       display: none;
     }
   }
-  input, textarea {
+  input,
+  textarea {
     background-color: transparent;
     border: 1px solid white;
     &::placeholder {
@@ -69,19 +70,22 @@
 
   .section_contact_labels {
     display: flex;
-    margin-bottom: .8em;
+    margin-bottom: 0.8em;
     &_el {
       display: flex;
       align-items: center;
       margin: 0 20px 0 0;
-      .fa {
+      svg {
         margin-right: 10px;
-        font-size: 1.3em;
-        opacity: .9;
+        width: 1em;
+        height: 1em;
+        opacity: 0.9;
         display: flex;
-        &.fa-envelope::before {
-          font-size: 0.9em;
-        }
+        fill: currentColor;
+      }
+      &--envelope svg {
+        width: 1.2em;
+        height: 1.2em;
       }
       span {
         font-weight: 400;
@@ -89,24 +93,24 @@
     }
   }
 
-@media (max-width: 640px) {
-  input[type="text"],
-  input[type="email"] {
-    flex-basis: 100%;
-  }
-} //media
-@media (max-width: 767px) {
-} //media
-@media (min-width: 768px) {
-} //media
-@media (max-width: 1023px) {
-  textarea {
-    height: 150px;
-  }
-} //media
-@media (min-width: 1024px) {
-  textarea {
-    height: 255px;
-  }
-} //media
+  @media (max-width: 640px) {
+    input[type="text"],
+    input[type="email"] {
+      flex-basis: 100%;
+    }
+  } //media
+  @media (max-width: 767px) {
+  } //media
+  @media (min-width: 768px) {
+  } //media
+  @media (max-width: 1023px) {
+    textarea {
+      height: 150px;
+    }
+  } //media
+  @media (min-width: 1024px) {
+    textarea {
+      height: 255px;
+    }
+  } //media
 } //#section_contact

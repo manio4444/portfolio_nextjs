@@ -1,3 +1,5 @@
+import { Envelope, Phone } from "~/app/_components/FontAwesome6Icons";
+
 export default function SectionContact() {
   return (
     <section id="section_contact" className="page_section">
@@ -38,11 +40,11 @@ export default function SectionContact() {
         </form>
         <div className="section_contact_labels print-only">
           <div className="section_contact_labels_el">
-            <i className="fa fa-phone"></i>
+            <Phone />
             <span>+48 512 260 969</span>
           </div>
-          <div className="section_contact_labels_el">
-            <i className="fa fa-envelope"></i>
+          <div className="section_contact_labels_el section_contact_labels_el--envelope">
+            <Envelope />
             {/*TODO: secure email below*/}
             <span>kalinowskixmarcin@o2.pl</span>
           </div>

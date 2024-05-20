@@ -20,7 +20,7 @@ export const metadata = {
 };
 
 const roboto = Roboto({
-  weight: ["100", "300", "500"],
+  weight: ["100", "300", "400", "500"],
   subsets: ["latin-ext"],
   variable: "--font-roboto",
 });
