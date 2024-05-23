@@ -14,7 +14,7 @@ import SectionProjects from "~/app/_components/SectionProjects";
 import projects from "~/server/data/projects";
 import SectionContact from "~/app/_components/SectionContact";
 import SectionFooter from "~/app/_components/SectionFooter";
-import { version } from "~/../package.json";
+import packageJson from "~/../package.json";
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
       <SectionExpectations />
       <SectionProjects projects={projects} />
       <SectionContact />
-      <SectionFooter version={version} />
+      <SectionFooter version={packageJson.version} />
     </main>
   );
 }
